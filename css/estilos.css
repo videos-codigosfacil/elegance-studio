@@ -1,0 +1,461 @@
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap');
+
+:root {
+    --crema: #f8f5f0;
+    --cafe: #332820;
+    --dorado: #bd9b70;
+    --texto: #746a61;
+    --blanco: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'DM Sans', sans-serif;
+    color: var(--cafe);
+    background: var(--blanco);
+}
+
+/* NAVEGACIÓN */
+
+.navbar {
+    background: rgba(255, 255, 255, 0.96);
+    padding: 17px 0;
+    box-shadow: 0 2px 18px rgba(0,0,0,0.04);
+}
+
+.navbar-brand {
+    font-family: 'Playfair Display', serif;
+    font-size: 25px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: var(--cafe);
+    line-height: 1;
+}
+
+.navbar-brand span {
+    color: var(--dorado);
+}
+
+.navbar-brand small {
+    display: block;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 9px;
+    letter-spacing: 4px;
+    margin-top: 6px;
+    font-weight: 500;
+}
+
+.nav-link {
+    color: var(--cafe);
+    font-size: 13px;
+    margin: 0 10px;
+    transition: 0.3s;
+}
+
+.nav-link:hover {
+    color: var(--dorado);
+}
+
+.btn-login,
+.btn-reservar {
+    border-radius: 2px;
+    padding: 11px 20px;
+    font-size: 12px;
+    letter-spacing: 0.5px;
+}
+
+/* PORTADA */
+
+.hero {
+    min-height: 720px;
+    height: 100vh;
+    max-height: 850px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    color: white;
+
+    background:
+        url("https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?w=1920")
+        center/cover no-repeat;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        90deg,
+        rgba(30, 24, 20, 0.86),
+        rgba(30, 24, 20, 0.45),
+        rgba(30, 24, 20, 0.12)
+    );
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    padding-top: 70px;
+}
+
+.hero-subtitle,
+.section-subtitle {
+    font-size: 11px;
+    letter-spacing: 3px;
+    color: var(--dorado);
+    font-weight: 700;
+}
+
+.hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(42px, 6vw, 76px);
+    line-height: 1.15;
+    margin: 25px 0;
+}
+
+.hero h1 em,
+.section-title em,
+.booking-section h2 em {
+    color: var(--dorado);
+    font-weight: 500;
+}
+
+.hero-content > p {
+    max-width: 520px;
+    color: #e6e0d9;
+    line-height: 1.9;
+    font-size: 14px;
+}
+
+.hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin-top: 32px;
+}
+
+.btn-gold {
+    background: var(--dorado);
+    color: white;
+    border: 1px solid var(--dorado);
+    border-radius: 2px;
+    padding: 14px 25px;
+    font-size: 13px;
+    transition: 0.3s;
+}
+
+.btn-gold:hover {
+    background: #a98459;
+    color: white;
+    transform: translateY(-2px);
+}
+
+.btn-outline-light {
+    border-radius: 2px;
+    padding: 14px 25px;
+    font-size: 13px;
+}
+
+.hero-note {
+    margin-top: 65px;
+    font-size: 12px;
+    color: #e6e0d9;
+}
+
+.hero-note i {
+    color: var(--dorado);
+    margin-right: 8px;
+}
+
+/* SECCIÓN NOSOTROS */
+
+.about-section {
+    padding: 110px 0;
+    background: var(--crema);
+}
+
+.about-image {
+    position: relative;
+    padding: 0 30px 30px 0;
+}
+
+.about-image img {
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+}
+
+.image-label {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background: var(--cafe);
+    color: white;
+    padding: 20px 28px;
+    display: flex;
+    flex-direction: column;
+    letter-spacing: 2px;
+    font-size: 11px;
+}
+
+.image-label small {
+    color: var(--dorado);
+    margin-top: 6px;
+    letter-spacing: 1px;
+}
+
+.section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(32px, 4vw, 46px);
+    line-height: 1.25;
+    margin: 18px 0;
+}
+
+.about-text {
+    color: var(--texto);
+    font-size: 14px;
+    line-height: 2;
+}
+
+.text-link {
+    display: inline-block;
+    color: var(--cafe);
+    text-decoration: none;
+    border-bottom: 1px solid var(--dorado);
+    padding-bottom: 8px;
+    margin-top: 15px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.text-link:hover {
+    color: var(--dorado);
+}
+
+/* SERVICIOS */
+
+.services-section {
+    padding: 110px 0;
+}
+
+.section-heading {
+    margin-bottom: 55px;
+}
+
+.section-heading > p {
+    color: var(--texto);
+    font-size: 14px;
+}
+
+.service-card {
+    background: white;
+    height: 100%;
+    transition: 0.3s;
+}
+
+.service-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+}
+
+.service-card img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+}
+
+.service-info {
+    padding: 25px 22px 30px;
+}
+
+.service-info span {
+    color: var(--dorado);
+    font-size: 10px;
+    letter-spacing: 2px;
+    font-weight: 700;
+}
+
+.service-info h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
+    margin: 12px 0;
+}
+
+.service-info p {
+    color: var(--texto);
+    font-size: 13px;
+    line-height: 1.8;
+    margin: 0;
+}
+
+/* RESERVAS */
+
+.booking-section {
+    padding: 105px 20px;
+    background: var(--cafe);
+    color: white;
+}
+
+.booking-section h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(35px, 5vw, 55px);
+    margin: 20px 0;
+    line-height: 1.3;
+}
+
+.booking-section p {
+    color: #d8cec4;
+    font-size: 14px;
+    margin-bottom: 30px;
+}
+
+/* CONTACTO */
+
+.contact-section {
+    padding: 95px 0;
+    background: var(--crema);
+}
+
+.contact-item {
+    display: flex;
+    gap: 18px;
+    align-items: flex-start;
+    padding: 18px 0;
+    border-bottom: 1px solid #e4ddd3;
+}
+
+.contact-item i {
+    color: var(--dorado);
+    font-size: 23px;
+}
+
+.contact-item strong {
+    font-size: 14px;
+}
+
+.contact-item p {
+    margin: 5px 0 0;
+    color: var(--texto);
+    font-size: 13px;
+}
+
+/* PIE DE PÁGINA */
+
+.footer {
+    background: #251d18;
+    color: white;
+    padding: 45px 0 20px;
+}
+
+.footer-brand {
+    font-family: 'Playfair Display', serif;
+    font-size: 25px;
+    letter-spacing: 2px;
+    color: white;
+    text-decoration: none;
+}
+
+.footer p {
+    color: #bcb1a7;
+    font-size: 12px;
+    margin-top: 8px;
+}
+
+.footer a:not(.footer-brand) {
+    color: white;
+    text-decoration: none;
+    font-size: 12px;
+    margin-left: 20px;
+}
+
+.footer a:hover {
+    color: var(--dorado);
+}
+
+.footer hr {
+    border-color: #65574d;
+    margin-top: 30px;
+}
+
+.footer .copyright {
+    text-align: center;
+    margin: 0;
+}
+
+/* ADAPTACIÓN A CELULARES */
+
+@media (max-width: 991px) {
+
+    .navbar-nav {
+        padding-top: 18px;
+        align-items: flex-start !important;
+    }
+
+    .nav-link {
+        margin: 7px 0;
+    }
+
+    .hero {
+        min-height: 700px;
+        background-position: 60% center;
+    }
+
+    .hero-content {
+        padding-top: 90px;
+    }
+
+    .about-section,
+    .services-section {
+        padding: 75px 0;
+    }
+
+    .about-image img {
+        height: 350px;
+    }
+
+    .footer .text-md-end {
+        text-align: left !important;
+    }
+
+    .footer a:not(.footer-brand) {
+        margin: 0 15px 0 0;
+    }
+}
+
+@media (max-width: 576px) {
+
+    .hero {
+        min-height: 650px;
+    }
+
+    .hero h1 {
+        font-size: 43px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .hero-buttons .btn {
+        width: 100%;
+        max-width: 260px;
+    }
+
+    .about-image {
+        padding-right: 15px;
+    }
+
+    .service-card img {
+        height: 240px;
+    }
+}

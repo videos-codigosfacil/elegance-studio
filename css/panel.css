@@ -1,0 +1,478 @@
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap');
+
+:root {
+    --cream: #f7f4ef;
+    --white: #ffffff;
+    --brown: #35291f;
+    --gold: #bd9b70;
+    --text: #756b62;
+    --border: #eee8df;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--cream);
+    color: var(--brown);
+}
+
+.dashboard {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* MENÚ LATERAL */
+
+.sidebar {
+    width: 260px;
+    min-width: 260px;
+    background: var(--white);
+    min-height: 100vh;
+    padding: 35px 22px;
+    display: flex;
+    flex-direction: column;
+    border-right: 1px solid var(--border);
+}
+
+.brand {
+    font-family: 'Playfair Display', serif;
+    font-size: 26px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: var(--brown);
+    text-decoration: none;
+    line-height: 1;
+    margin: 5px 0 65px 8px;
+}
+
+.brand span {
+    color: var(--gold);
+}
+
+.brand small {
+    display: block;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 9px;
+    letter-spacing: 4px;
+    margin-top: 8px;
+}
+
+.sidebar-label {
+    color: #aaa098;
+    font-size: 10px;
+    letter-spacing: 2px;
+    font-weight: 700;
+    margin: 0 0 18px 10px;
+}
+
+.side-link {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 15px 14px;
+    margin-bottom: 7px;
+    color: var(--text);
+    text-decoration: none;
+    font-size: 13px;
+    border-radius: 4px;
+    transition: .3s;
+}
+
+.side-link i {
+    font-size: 18px;
+}
+
+.side-link:hover,
+.side-link.active {
+    background: #f4eee5;
+    color: #9c7950;
+}
+
+.sidebar-bottom {
+    margin-top: auto;
+}
+
+.help-card {
+    background: var(--cream);
+    padding: 20px 16px;
+    margin-bottom: 25px;
+    border-radius: 4px;
+}
+
+.help-card i {
+    font-size: 23px;
+    color: var(--gold);
+}
+
+.help-card h6 {
+    margin-top: 12px;
+    font-weight: 700;
+    font-size: 13px;
+}
+
+.help-card p {
+    color: var(--text);
+    font-size: 11px;
+    line-height: 1.7;
+    margin: 0;
+}
+
+.logout {
+    border-top: 1px solid var(--border);
+    border-radius: 0;
+    padding-top: 22px;
+    color: #a65e53;
+}
+
+/* CONTENIDO */
+
+.main-content {
+    flex: 1;
+    min-width: 0;
+    padding: 0 45px;
+}
+
+.topbar {
+    min-height: 95px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 35px;
+}
+
+.topbar-subtitle,
+.section-label {
+    font-size: 10px;
+    letter-spacing: 2px;
+    color: var(--gold);
+    font-weight: 700;
+}
+
+.topbar h6 {
+    margin: 5px 0 0;
+    font-weight: 600;
+    font-size: 15px;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.user-avatar {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: #e9dfd1;
+    display: grid;
+    place-items: center;
+    color: #806344;
+    font-size: 20px;
+}
+
+.user-info strong,
+.user-info small {
+    display: block;
+}
+
+.user-info strong {
+    font-size: 12px;
+}
+
+.user-info small {
+    color: var(--text);
+    font-size: 11px;
+    margin-top: 3px;
+}
+
+/* BIENVENIDA */
+
+.welcome-banner {
+    min-height: 300px;
+    padding: 50px 55px;
+    background:
+        linear-gradient(90deg, rgba(44,33,25,.94), rgba(44,33,25,.75)),
+        url("https://images.unsplash.com/photo-1560066984-138dadb4c035?w=1400")
+        center/cover;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.welcome-content {
+    max-width: 580px;
+    position: relative;
+    z-index: 2;
+}
+
+.welcome-tag {
+    color: #d5b58e;
+    font-size: 10px;
+    letter-spacing: 2px;
+    font-weight: 700;
+}
+
+.welcome-banner h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(32px, 4vw, 48px);
+    margin: 20px 0 12px;
+}
+
+.welcome-banner p {
+    color: #e2d9d0;
+    font-size: 13px;
+    line-height: 1.9;
+    max-width: 500px;
+}
+
+.welcome-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 15px;
+    padding: 14px 22px;
+    margin-top: 15px;
+    background: var(--gold);
+    color: white;
+    text-decoration: none;
+    font-size: 12px;
+    transition: .3s;
+}
+
+.welcome-button:hover {
+    background: #a8845d;
+    color: white;
+}
+
+.welcome-decoration {
+    font-size: 150px;
+    color: rgba(255,255,255,.12);
+    padding-right: 20px;
+}
+
+/* TARJETAS */
+
+.dashboard-section {
+    padding: 55px 0 35px;
+}
+
+.section-header {
+    margin-bottom: 25px;
+}
+
+.section-header h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 27px;
+    margin-top: 9px;
+}
+
+.action-card {
+    background: white;
+    border: 1px solid var(--border);
+    padding: 30px;
+    min-height: 270px;
+    height: 100%;
+    transition: .3s;
+}
+
+.action-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(53,41,31,.06);
+}
+
+.action-icon {
+    width: 48px;
+    height: 48px;
+    background: #f5efe7;
+    color: #a7845d;
+    display: grid;
+    place-items: center;
+    font-size: 22px;
+    margin-bottom: 23px;
+}
+
+.card-number {
+    font-size: 9px;
+    color: var(--gold);
+    letter-spacing: 2px;
+    font-weight: 700;
+}
+
+.action-card h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 23px;
+    margin: 12px 0;
+}
+
+.action-card p {
+    color: var(--text);
+    font-size: 12px;
+    line-height: 1.8;
+    max-width: 350px;
+}
+
+.card-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 12px;
+    color: var(--brown);
+    font-size: 12px;
+    font-weight: 700;
+    text-decoration: none;
+    border-bottom: 1px solid var(--gold);
+    padding-bottom: 7px;
+}
+
+.card-link:hover {
+    color: var(--gold);
+}
+
+/* INFORMACIÓN */
+
+.experience-section {
+    background: #eee6da;
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    margin: 25px 0 40px;
+}
+
+.experience-icon {
+    min-width: 65px;
+    height: 65px;
+    display: grid;
+    place-items: center;
+    background: white;
+    color: var(--gold);
+    font-size: 28px;
+    border-radius: 50%;
+}
+
+.experience-section h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    margin: 8px 0;
+}
+
+.experience-section p {
+    font-size: 12px;
+    line-height: 1.8;
+    color: var(--text);
+    margin: 0;
+}
+
+/* PIE DE PÁGINA */
+
+.dashboard-footer {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    border-top: 1px solid var(--border);
+    padding: 22px 0;
+    color: #968b81;
+    font-size: 10px;
+    letter-spacing: .5px;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 1000px) {
+
+    .sidebar {
+        width: 220px;
+        min-width: 220px;
+    }
+
+    .main-content {
+        padding: 0 25px;
+    }
+
+    .welcome-decoration {
+        font-size: 100px;
+    }
+}
+
+@media (max-width: 700px) {
+
+    .dashboard {
+        display: block;
+    }
+
+    .sidebar {
+        width: 100%;
+        min-width: 0;
+        min-height: auto;
+        padding: 20px;
+    }
+
+    .brand {
+        margin: 5px 0 25px;
+    }
+
+    .sidebar-label {
+        margin-top: 5px;
+    }
+
+    .side-link {
+        padding: 11px;
+    }
+
+    .sidebar-bottom {
+        margin-top: 15px;
+    }
+
+    .help-card {
+        display: none;
+    }
+
+    .main-content {
+        padding: 0 18px;
+    }
+
+    .topbar {
+        min-height: 85px;
+    }
+
+    .user-info strong {
+        max-width: 130px;
+        overflow-wrap: anywhere;
+    }
+
+    .welcome-banner {
+        padding: 35px 25px;
+        min-height: 300px;
+    }
+
+    .welcome-decoration {
+        display: none;
+    }
+
+    .section-header h2 {
+        font-size: 23px;
+    }
+
+    .experience-section {
+        align-items: flex-start;
+        padding: 22px;
+    }
+
+    .experience-section h3 {
+        font-size: 19px;
+    }
+
+    .dashboard-footer {
+        flex-direction: column;
+    }
+}

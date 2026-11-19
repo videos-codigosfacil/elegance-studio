@@ -1,0 +1,26 @@
+ÉLÉGANCE STUDIO
+SISTEMA DE CITAS PARA PELUQUERÍA
+
+DATOS DE ACCESO PARA EL DOCENTE
+
+El sistema cuenta con dos tipos de usuarios:
+
+1. ACCESO COMO CLIENTE
+Correo electrónico: solorzanogianella2022@gmail.com
+Contraseña: Elegance2026
+
+Permite:
+- Reservar citas.
+- Consultar el estado de las citas.
+- Cancelar citas.
+
+2. ACCESO COMO PELUQUERO
+Correo electrónico: diazgabriel@gmail.com
+Contraseña: Elegance2026
+
+Permite:
+- Consultar las citas de los clientes.
+- Confirmar citas.
+- Rechazar citas.
+
+
